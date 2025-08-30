@@ -1,7 +1,9 @@
+// api.js
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:4000/api",
+  baseURL: import.meta.env.VITE_API_URL || "https://8f41f3d12ae6.ngrok-free.app/", 
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:8000",
   withCredentials: false,
 });
 

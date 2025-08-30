@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import ReportIncident from "./pages/ReportIncident.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 import Alerts from "./pages/Alerts.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
@@ -24,6 +25,7 @@ export default function App() {
             element={<ProtectedRoute><ReportIncident /></ProtectedRoute>}
           />
           <Route path="*" element={<NotFound />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </main>
       <Footer />
