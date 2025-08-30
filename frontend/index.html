@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>Nereus - Coastal Early Warning System</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+  :root { --primary-color: #1193d4; --secondary-color: #f97316; }
+  .glassmorphism { background: rgba(17,28,34,0.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .text-glow { text-shadow: 0 0 8px rgba(255,255,255,0.3), 0 0 20px rgba(17,147,212,0.4); }
+  .btn-glow-blue:hover { box-shadow: 0 0 15px rgba(17,147,212,0.6); }
+  .btn-glow-orange:hover { box-shadow: 0 0 15px rgba(249,115,22,0.6); }
+  .icon-glow:hover { color: #fff; text-shadow: 0 0 10px rgba(146,183,201,0.8); }
+</style>
+</head>
+<body class="bg-[#111c22] font-['Space_Grotesk',_'Noto_Sans',_sans-serif] text-white">
+<div class="relative min-h-screen">
+  <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+    <div class="absolute inset-0 bg-black/60"></div>
+  </div>
+  <div class="relative z-10 flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 glassmorphism">
+      <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+        <a class="flex items-center gap-3 text-xl font-bold" href="#home">
+          <svg class="h-8 w-8 text-[var(--primary-color)]" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M36.7 44C34 44 31.6 39.8 30.36 33.69 29.12 39.84 26.74 44 24 44s-5.12-4.16-6.36-10.31C16.39 39.84 14.01 44 11.27 44 7.25 44 4 35.05 4 24S7.25 4 11.27 4c2.74 0 5.13 4.16 6.36 10.31C18.88 8.16 21.26 4 24 4s5.12 4.16 6.36 10.31C31.6 8.16 34 4 36.73 4 40.74 4 44 12.95 44 24s-3.26 20-7.3 20z" fill="currentColor"/></svg>
+          <span>Nereus</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a class="hover:text-[var(--primary-color)]" href="#home">Home</a>
+          <a class="hover:text-[var(--primary-color)]" href="#why">Why Nereus</a>
+          <a class="hover:text-[var(--primary-color)]" href="#features">Features</a>
+          <a class="hover:text-[var(--primary-color)]" href="#community">Community</a>
+        </div>
+        <div class="hidden md:flex items-center gap-4">
+          <a class="px-5 py-2.5 text-sm font-semibold rounded-lg hover:bg-white/10" href="#">Login</a>
+          <a class="px-5 py-2.5 text-sm font-semibold text-white bg-[var(--primary-color)] rounded-lg" href="#">Register</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home" class="flex-grow flex items-center justify-center text-center px-4 py-12">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-glow">"Together, we can turn the tide against disasters."</h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-300">AI + Community Powered Coastal Resilience.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4 md:gap-6">
+          <button onclick="openReport()" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-bold btn-glow-blue">🌊 Get Alerts</button>
+          <button onclick="openReport()" class="px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg font-bold btn-glow-orange">📢 Report Incident</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why" class="py-16 container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-8">Why Nereus</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="p-6 bg-[#0f1720] rounded-xl glassmorphism">
+          <h3 class="font-semibold text-lg mb-2">Hyperlocal, Explainable AI</h3>
+          <p class="text-gray-300 text-sm">Predictions with explanations — understand *why* a risk is predicted at your coordinates.</p>
+        </div>
+        <div class="p-6 bg-[#0f1720] rounded-xl glassmorphism">
+          <h3 class="font-semibold text-lg mb-2">Real-time Sensors & Satellite</h3>
+          <p class="text-gray-300 text-sm">Verified by sensors, satellites, and citizen reports for high confidence.</p>
+        </div>
+        <div class="p-6 bg-[#0f1720] rounded-xl glassmorphism">
+          <h3 class="font-semibold text-lg mb-2">Community + Gov Collaboration</h3>
+          <p class="text-gray-300 text-sm">Role-based dashboards for governments, NGOs, and local communities.</p>
+        </div>
+        <div class="p-6 bg-[#0f1720] rounded-xl glassmorphism">
+          <h3 class="font-semibold text-lg mb-2">Low-bandwidth & Offline Support</h3>
+          <p class="text-gray-300 text-sm">SMS/IVR/WhatsApp/PWA fallbacks mean alerts reach everyone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-12 container mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-4">Core Features (overview)</h2>
+      <ul class="list-disc ml-6 text-gray-300">
+        <li>Interactive real-time map with satellite toggle and heatmaps.</li>
+        <li>Live sensor panels & trend charts; event timeline</li>
+        <li>Incident reporting modal: geo-tagged photo/voice/tags</li>
+        <li>Explainable-AI panel & community feed with confidence scores</li>
+      </ul>
+    </section>
+
+    <footer class="py-8">
+      <div class="container mx-auto px-6 text-center text-gray-400">
+        <p>© 2024 Nereus. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<script>
+function openReport(){
+  const sample = { features: [0.1, 0.5, 0.2, 0.3] };
+  fetch('/api/predict', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(sample)
+  }).then(r=>r.json()).then(d=>{
+    alert('Prediction: ' + JSON.stringify(d));
+  }).catch(e=>{
+    alert('Backend not running (this is the static demo).');
+  });
+}
+</script>
+</body></html>

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur supports-[backdrop-filter]:bg-white/10;
+}
